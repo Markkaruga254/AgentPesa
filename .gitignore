@@ -4,13 +4,12 @@ target/
 test-ledger/
 *.so
 *.key
-*.json
-
-# Keep the example IDL if one is intentionally checked in.
-!idl/*.json
+id.json
+*-keypair.json
 
 # Node
 node_modules/
+package-lock.json
 dist/
 .next/
 coverage/
