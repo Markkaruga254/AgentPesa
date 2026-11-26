@@ -76,7 +76,16 @@ npm install
 anchor build
 ```
 
-The checked-in program ID is a temporary placeholder. Before building for deployment, generate a program keypair and update **both** `declare_id!` in `programs/agent_pesa/src/lib.rs` and the `[programs.devnet]` entry in `Anchor.toml` to the generated public key. Keep the generated keypair in the local Anchor build directory; never commit it.
+The checked-in program ID is a temporary placeholder. Generate a local program keypair, then let Anchor synchronize its public key into the Rust source and workspace configuration:
+
+```bash
+mkdir -p target/deploy
+solana-keygen new --no-bip39-passphrase -o target/deploy/agent_pesa-keypair.json
+anchor keys sync
+anchor keys list
+```
+
+Confirm that the address in `programs/agent_pesa/src/lib.rs` and `Anchor.toml` matches the key listed for `agent_pesa`. The keypair stays in the ignored `target/` directory; never commit it.
 
 Configure Devnet and request test SOL:
 
