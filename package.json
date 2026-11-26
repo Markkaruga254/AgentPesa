@@ -1,0 +1,16 @@
+{
+  "name": "agentpesa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Programmable spending controls for autonomous AI agents on Solana",
+  "scripts": {
+    "build": "anchor build",
+    "test": "anchor test",
+    "lint": "prettier --check ."
+  },
+  "devDependencies": {
+    "@coral-xyz/anchor": "0.32.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  }
+}
