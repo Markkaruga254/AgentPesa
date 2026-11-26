@@ -1,0 +1,26 @@
+# Solana / Anchor
+.anchor/
+target/
+test-ledger/
+*.so
+*.key
+*.json
+
+# Keep the example IDL if one is intentionally checked in.
+!idl/*.json
+
+# Node
+node_modules/
+dist/
+.next/
+coverage/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
